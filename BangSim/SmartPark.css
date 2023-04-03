@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    background-size: cover;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: black;
+    color: orange;
+}
+
+.brand-tittle{
+    font-size: 2.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0.5rem;
+}
+
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li{
+    list-style: none;
+    
+}
+
+.navbar-links li a{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    display: block;
+    padding: 1rem;
+    
+}
+
+.navbar-links li:hover{
+    background-color: orange;
+}

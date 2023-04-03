@@ -1,0 +1,426 @@
+toggle-button{
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 21px;
+}
+.toggle-button.bar{
+    height: 3px;
+    width: 100%;
+    background-color: orange;
+    border-radius: 10px;
+}
+
+@media(mx-width: 600px){
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+    }
+}
+.h3{
+    display: flex;
+    text-align: center;
+    padding: 0.5rem;
+}
+.section{
+    padding: 0;
+    margin: 0;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+}
+.slider{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+ 
+.slide{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slide input{
+    display: none;  
+}
+
+.st{
+    width: 20%;
+    transition: 2s;
+}
+
+.st img{ 
+    width: 700px;
+    height: 500px;
+}
+
+.nav-m{
+    width: 800px;
+    position: absolute;
+    margin-top: -40px;
+    justify-content: center;
+    display: flex;
+}
+.m-btn{
+    border: 2px solid orange;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.m-btn:not(:last-child){
+    margin-right: 30px;
+}
+.m-btn:hover{
+    background-color: orange;
+}
+#radio1:checked~.first{
+    margin-left: 0;
+}
+
+#radio2:checked~.first{
+    margin-left: -20%;
+}
+
+#radio3:checked~.first{
+    margin-left: -40%;
+}
+.nav-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 460px;
+    display: flex;
+    justify-content: center;
+}
+ 
+.nav-auto div{
+    border: 2px solid orange;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.nav-auto div:not(:last-child){
+    margin-right: 30px;
+    justify-content: center;
+}
+
+#radio1:checked~.nav-auto.a-b1{
+   background-color:white;
+}
+
+#radio2:checked~.nav-auto.a-b2{
+    background-color: rgb(252, 251, 250);
+}
+
+#radio3:checked~.nav-auto.a-b3{
+    background-color: rgb(252, 251, 250);
+}
+
+
+
+html code:
+<section class="section">
+        <div class="slider">
+            <div class="slide">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3 ">
+                <div class="st first">
+                    <img src="./images/image1.jpg" alt="images">
+                </div>
+                <div class="st">
+                    <img src="./images/image2.jpg" alt="images">
+                </div>
+                <div class="st">
+                    <img src="./images/image3.jpg" alt="images">
+                </div>
+                <div class="nav-auto">
+                    <div class="a-b1"></div>
+                    <div class="a-b2"></div>
+                    <div class="a-b3"></div>
+                </div>
+                <div class="nav-m">
+                    <label for="radio1" class="m-btn "></label>
+                    <label for="radio2" class="m-btn "></label>
+					<label for="radio3" class="m-btn "></label>
+            	</div>
+        </div>
+       
+	</section>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Product Card Slider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body> 
+  <section class="slider">
+    <div>
+      <img src="https://cdn.pixabay.com/photo/2017/09/05/23/07/dog-2719601__340.jpg">
+      <div class="desc">
+        <h2><span>Animal</span> Paintings</h2>
+        <p>$999.99</p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+    </div>
+  
+    <div>
+      <img src="https://cdn.pixabay.com/photo/2017/05/20/15/27/dolphin-2329165__340.jpg">
+      <div class="desc">
+        <h2><span>Dolphine</span> Paintings</h2>
+        <p>$699.99</p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+    </div>
+  
+    <div>
+      <img src="https://cdn.pixabay.com/photo/2017/08/01/15/04/window-2566122__340.jpg">
+      <div class="desc">
+        <h2><span>Nature</span> Paintings</h2>
+        <p>$589.99</p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+    </div>
+  
+    <div>
+      <img src="https://cdn.pixabay.com/photo/2017/06/23/16/16/balloon-2435142__340.jpg">
+      <div class="desc">
+        <h2><span>Parachute</span> Paintings</h2>
+        <p>$599.99</p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+    </div>
+  
+    <div>
+      <img src="https://cdn.pixabay.com/photo/2017/08/04/14/43/car-2580234__340.jpg">
+      <div class="desc">
+        <h2><span>Vehicle</span> Paintings</h2>
+        <p>$939.99</p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+    </div>
+  </section> 
+<div class="credit">Made with <span style="color:#43cea2">?</span> by <a href="https://www.learningrobo.com/">Learning Robo</a></div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script> 
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+}
+
+h2,
+p {
+    margin: 30px 0 0;
+    padding: 0;
+} 
+p {
+    color: #072f5f;
+}
+.slider {
+    max-width: 800px;
+    width: 90%;
+    margin: 15px auto;
+    background: linear-gradient(to right, #185a9d, #43cea2);
+    border-radius: 5px;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); 
+}
+
+.slick-slider button{ 
+    position: absolute;
+    top: 50%;
+    background: #fff;
+    border: none;
+    outline: none;
+    z-index:100;
+    width: 50px;
+    height: 50px; 
+    color: transparent;
+    cursor: pointer;
+    transform: translate(0%,-70%);
+    border-radius: 36px;
+    box-shadow: 0px 2px 20px rgba(0,0,0,0.07);
+}
+.slick-slider .slick-prev{
+    left:-30px;
+}
+.slick-slider .slick-prev::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f104";
+    font-size:30px;
+    color: #072f5f;
+    left: 8px;
+    position: relative;
+    z-index: 10;
+}
+.slick-slider .slick-next{
+    right:-30px;
+}
+.slick-slider .slick-next::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f105";
+    font-size:30px;
+    color: #072f5f;
+    right: 15px;
+    position: relative;
+    z-index: 10;
+}
+.slick-slide {
+    color: #333;
+    padding: 40px 0;
+    font-size: 1.25em;
+    font-family: "Verdana";
+    text-align: center;
+    pointer-events: none;
+}
+
+.slick-slide .desc {
+    opacity: 0;
+}
+
+.slick-slide .desc>* {
+    transition: all 900ms ease;
+}
+
+.slick-slide .desc h2 {
+    position: relative;
+    left: 50px;
+    line-height: 1;
+}
+.slick-slide .desc h2 span{
+    color:#bcdee7;
+}
+.slick-slide .desc p {
+    position: relative;
+    top: 50px;
+    opacity: 0;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+.slick-dots {
+    text-align: center;
+}
+
+.slick-dots li {
+    display: inline-block;
+    padding: 1px;
+    background: #ccc;
+    margin: 10px 5px;
+    width: 40px;
+    height: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.slick-dots li.slick-active {
+    background: #072f5f;
+}
+
+.slick-dots button {
+    display: none;
+}
+.slick-slide {
+    opacity: 0.2;
+    transition: all 300ms ease;
+}
+
+.slick-current {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.slick-current .desc {
+    opacity: 1;
+}
+
+.slick-current .desc h2 {
+    left: 0; 
+}
+
+.slick-current .desc p {
+    top: 0;
+    opacity: 1;
+}
+
+.btn {
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: 2px solid #072f5f;
+    text-decoration: none;
+    color: #072f5f;
+    font-size: .6em;
+    text-transform: uppercase;
+    display: block;
+    margin: 30px auto 0;
+    max-width: 100px;
+    width: 100%;
+    font-weight: bold;
+    pointer-events: initial;
+}
+.credit{
+    text-align: center;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.credit a{
+    text-decoration: none;
+    color: #bcdee7;
+    font-weight: bold;
+}
+
+
+function createSlick(){  
+  $(".slider").not('.slick-initialized').slick({
+    centerMode: true,
+      autoplay: true,
+      dots: true, 
+        arrows: true,
+      slidesToShow: 3,
+      responsive: [{ 
+          breakpoint: 768,
+          settings: {
+              dots: false,
+              arrows: false,
+              infinite: true,
+              slidesToShow: 1,
+              slidesToScroll: 1
+          } 
+      }]
+  }); 
+
+} 
+createSlick();
+$(window).on( 'resize', createSlick );
+
